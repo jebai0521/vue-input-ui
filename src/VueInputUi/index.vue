@@ -45,17 +45,6 @@
       @blur="onBlur"
       @click="$emit('click')"
     />
-    <label
-      ref="label"
-      :for="id"
-      :class="error ? 'lm-text-danger' : null"
-      :style="[colorStyle]"
-      class="field-label"
-      @click="focusInput"
-    >
-      {{ hintValue || labelValue }}
-    </label>
-
     <button
       v-if="clearable && inputValue && !textarea"
       class="field-clear"
@@ -183,16 +172,13 @@
     position: relative;
 
     &.is-dark {
-      .field-label{
-        color: rgba(white, 0.70);
-      }
       .field-input{
         background-color: #424242;
         border-color: rgba(white, 0.70);
         color: rgba(white, 0.70);
       }
       &.is-disabled {
-        .field-label, .field-input {
+        .field-input {
           color: #000;
         }
       }
@@ -203,19 +189,6 @@
           background-color: rgba(white, 0.54);
         }
       }
-    }
-    .field-label{
-      position: absolute;
-      top: 4px;
-      cursor: pointer;
-      left: 13px;
-      -webkit-transform: translateY(25%);
-      transform: translateY(25%);
-      opacity: 0;
-      -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-      font-size: 11px;
-      color: rgba(0, 0, 0, 0.54);
     }
     .field-input{
       cursor: pointer;
@@ -295,38 +268,24 @@
     }
 
     &.has-value {
-      .field-label {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        font-size: 11px;
-      }
       .field-input {
-        padding-top: 14px;
+        // padding-top: 14px;
         &.textarea {
-          padding-top: 20px;
+          // padding-top: 20px;
         }
       }
     }
     &.has-hint {
-      .field-label{
-        opacity: 1;
-        transform: translateY(0);
-        font-size: 11px;
-      }
       .field-input {
-        padding-top: 14px;
+        // padding-top: 14px;
         &.textarea {
-          padding-top: 20px;
+          // padding-top: 20px;
         }
       }
     }
     &.is-focused {
       .field-input {
         border-color: dodgerblue;
-      }
-      .field-label {
-        color: dodgerblue;
       }
     }
     &.has-error {
@@ -338,9 +297,6 @@
       .field-input {
         border-color: #CCC;
         background: #F2F2F2;
-      }
-      .field-label, .field-input {
-        cursor: default;
       }
     }
     .lm-text-danger {
@@ -423,14 +379,11 @@
           min-height: 36px;
         }
       }
-      .field-label {
-        font-size: 10px;
-      }
       &.has-value {
         .field-input {
-          padding-top: 12px;
+          // padding-top: 12px;
           &.textarea {
-            padding-top: 18px;
+            // padding-top: 18px;
           }
         }
       }
@@ -444,14 +397,11 @@
           min-height: 48px;
         }
       }
-      .field-label {
-        font-size: 14px;
-      }
       &.has-value {
         .field-input {
-          padding-top: 16px;
+          // padding-top: 16px;
           &.textarea {
-            padding-top: 26px;
+            // padding-top: 26px;
           }
         }
       }

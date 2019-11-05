@@ -390,7 +390,7 @@
     }
     &.lg {
       .field-input {
-        font-size: 16px;
+        font-size: 18px;
 
         &:not(.textarea) {
           height: 48px;

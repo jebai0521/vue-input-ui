@@ -203,7 +203,7 @@
       outline: none;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-      font-size: 14px;
+      font-size: 2.1rem;
       z-index: 0;
 
       &:not(.textarea) {
@@ -372,7 +372,7 @@
     }
     &.sm {
       .field-input {
-        font-size: 12px;
+        font-size: 1.8rem;
 
         &:not(.textarea) {
           height: 36px;
@@ -390,7 +390,7 @@
     }
     &.lg {
       .field-input {
-        font-size: 18px;
+        font-size: 2.4rem;
 
         &:not(.textarea) {
           height: 48px;
